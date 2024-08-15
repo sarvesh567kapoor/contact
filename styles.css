@@ -35,6 +35,7 @@ url("./Asser1.jpg") no-repeat center center/cover; */
   /* ), */
   /* background: url("./Asser1.jpg") no-repeat center center/cover; */
   position: relative;
+  font-family: "Open Sans", sans-serif;
 }
 .banner-img::before {
   content: "";
@@ -99,8 +100,6 @@ nav ul li a {
 
 .content h1 {
   font-size: 60px;
-  font-weight: 700;
-  margin-bottom: 20px;
 }
 
 .content p {
@@ -142,13 +141,13 @@ nav ul li a {
 }
 
 .contact-form button {
-  width: 100%;
+  width: 33%;
   padding: 10px;
-  background-color: #fff;
-  color: #008080;
+  background-color: transparent;
+  color: white;
   font-size: 16px;
   font-weight: bold;
-  border: none;
+  border: 1px solid white;
   border-radius: 4px;
   cursor: pointer;
 }
@@ -160,4 +159,172 @@ nav ul li a {
 
 .wave {
   position: relative;
+}
+
+input[type="text"] {
+  background: transparent;
+  border: 1px solid white;
+}
+
+input[type="email"] {
+  background: transparent;
+  border: 1px solid white;
+}
+
+.button-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.headline {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: transparent;
+  -webkit-text-stroke: 1px #ffffff;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.headline-bold {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700; /* Bold weight */
+  text-transform: uppercase;
+}
+
+.nav-links,
+.call-now {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400; /* Regular weight */
+}
+.call-now {
+  color: rgb(16 130 133 / 91%);
+  font-weight: 600;
+}
+
+.container ul {
+  text-transform: uppercase;
+}
+.active-now {
+  text-decoration: underline;
+}
+
+/* Hamburger menu icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+}
+
+/* Responsive styles */
+@media (max-width: 786px) {
+  .nav-links2 {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #2d2d2d;
+    flex-direction: column;
+    width: 200px;
+    text-align: right;
+    padding: 20px;
+  }
+
+  .nav-links2.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+  .row {
+    flex-direction: column;
+  }
+
+  .row > div {
+    max-width: 100%;
+  }
+
+  .contact-form {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+  }
+
+  .content.col-sm-6 {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  header {
+    margin-bottom: 100px;
+  }
+  .contact-form h2 {
+    font-size: 30px;
+  }
+  .content h1 {
+    font-size: 40px;
+  }
+  .content h2 {
+    font-size: 37px;
+  }
+  .content p {
+    font-size: 15px;
+  }
+  .contact-form button {
+    width: 43%;
+  }
+}
+
+@media (max-width: 430px) {
+  header {
+    margin-bottom: 140px;
+  }
+  .contact-form h2 {
+    font-size: 25px;
+  }
+  .contact-form button {
+    width: 60%;
+  }
+}
+
+/* Fullscreen Menu Styles */
+.fullscreen-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.fullscreen-menu.active {
+  display: flex;
+}
+
+.fullscreen-menu a {
+  color: #fff;
+  font-size: 24px;
+  margin: 15px 0;
+  text-decoration: none;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
 }

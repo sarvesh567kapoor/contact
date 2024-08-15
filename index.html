@@ -10,6 +10,11 @@
       integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
       crossorigin="anonymous"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -20,16 +25,32 @@
             <div class="logo">
               <img src="./Asset2.png" alt="Dunton Group Logo" />
             </div>
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact</a></li>
-              <li>|</li>
-              <li>
-                <a href="tel:2033644362">Call Now for a Consult 203.364.4362</a>
+            <ul class="nav-links2">
+              <li class="nav-links active-now"><a href="#">Home</a></li>
+              <li class="nav-links"><a href="#">About</a></li>
+              <li class="nav-links"><a href="#">Contact</a></li>
+              <li class="nav-links">|</li>
+              <li class="nav-links">
+                Call Now for a Consult
+                <a class="call-now" href="tel:2033644362">203.364.4362</a>
               </li>
             </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+              <div></div>
+              <div></div>
+              <div></div>
+              <!-- <div>
+                Call Now for a Consult<a href="tel:2033644362">203.364.4362</a>
+              </div> -->
+            </div>
           </nav>
+          <div class="fullscreen-menu">
+            <span class="close-btn" onclick="toggleMenu()">&times;</span>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+          </div>
         </div>
       </header>
       <main>
@@ -37,8 +58,8 @@
           <div class="container">
             <div class="row">
               <div class="content col-sm-6">
-                <h2>Frontend</h2>
-                <h2>Dev Test</h2>
+                <h1 class="headline">Frontend</h1>
+                <h2 class="headline-bold">Dev Test</h2>
                 <p>
                   Lorem ipsum dolor sit amet, cu menandri molestiae voluptaria
                   eam, invidunt reprehendunt nec ei. Sonet regione consulatu vel
@@ -84,7 +105,11 @@
                         </div>
                       </div>
                     </div>
-                    <button type="submit">Send Message</button>
+                    <div
+                      class="text-center align-items-center button-container"
+                    >
+                      <button type="submit">Send Message</button>
+                    </div>
                   </form>
                 </div>
               </div>
@@ -118,4 +143,10 @@
     integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
     crossorigin="anonymous"
   ></script>
+  <script>
+    function toggleMenu() {
+      const navLinks = document.querySelector(".fullscreen-menu");
+      navLinks.classList.toggle("active");
+    }
+  </script>
 </html>
